@@ -110,6 +110,7 @@ import qualified Data.IntMap                    as IntMap
 import qualified Data.IntSet                    as IntSet
 import qualified Data.List.NonEmpty             as NE
 import qualified Data.Map                       as Map
+import qualified Data.Monoid                    as Monoid
 import qualified Data.Semigroup                 as Semi
 import qualified Data.Sequence                  as Seq
 import qualified Data.Set                       as Set
@@ -792,6 +793,24 @@ deriving newtype instance Hashable a => Hashable (Semi.WrappedMonoid a)
 #if !MIN_VERSION_base(4,16,0)
 deriving newtype instance Hashable a => Hashable (Semi.Option a)
 #endif
+
+deriving newtype instance Hashable Monoid.All
+
+deriving newtype instance Hashable Monoid.Any
+
+deriving newtype instance Hashable a => Hashable (Monoid.Sum a)
+
+deriving newtype instance Hashable a => Hashable (Monoid.Product a)
+
+deriving newtype instance Hashable a => Hashable (Monoid.First a)
+
+deriving newtype instance Hashable a => Hashable (Monoid.Last a)
+
+deriving newtype instance Hashable a => Hashable (Monoid.Dual a)
+
+deriving newtype instance Hashable (f a) => Hashable (Monoid.Alt f a)
+
+deriving newtype instance Hashable (f a) => Hashable (Monoid.Ap f a)
 
 -- TODO: this instance is removed as there isn't Eq1 Min/Max, ...
 
