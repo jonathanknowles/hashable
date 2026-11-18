@@ -1,5 +1,10 @@
 See also https://pvp.haskell.org/faq
 
+## Version 1.5.2.0
+
+  * Add `Hashable` instances for the `Data.Monoid` newtypes
+    `All`, `Any`, `Sum`, `Product`, `First`, `Last`, `Dual`, `Alt`, and `Ap`.
+
 ## Version 1.5.1.0
 
   * Update xxHash to version 0.8.3

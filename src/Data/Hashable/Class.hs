@@ -794,22 +794,31 @@ deriving newtype instance Hashable a => Hashable (Semi.WrappedMonoid a)
 deriving newtype instance Hashable a => Hashable (Semi.Option a)
 #endif
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable Monoid.All
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable Monoid.Any
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable a => Hashable (Monoid.Sum a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable a => Hashable (Monoid.Product a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable a => Hashable (Monoid.First a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable a => Hashable (Monoid.Last a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable a => Hashable (Monoid.Dual a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable (f a) => Hashable (Monoid.Alt f a)
 
+-- | @since 1.5.2.0
 deriving newtype instance Hashable (f a) => Hashable (Monoid.Ap f a)
 
 -- TODO: this instance is removed as there isn't Eq1 Min/Max, ...
